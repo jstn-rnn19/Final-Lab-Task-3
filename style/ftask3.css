@@ -1,0 +1,129 @@
+body {
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: poppins;
+    background-color: #0b1215;
+    margin-left: auto;
+    margin-right: auto;
+}
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+.lab3title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    font-family: poppins;
+    color: rgb(244, 244, 244);
+    font-size: clamp(.8rem, 2vw, 2.5rem);
+    margin: 10px auto;
+}
+.lab3descrip {
+    display: flex;
+    font-family: poppins;
+    color: rgb(244, 244, 244);
+    align-items: center;
+    justify-content: center;
+    color: rgb(244, 244, 244);
+    margin-top: 0px;
+    font-weight: 600;
+}
+.descrip {
+    display: flex;
+    font-family: poppins;
+    color: rgb(244, 244, 244);
+    align-items: center;
+    justify-content: center;
+    word-break: break-all;
+    text-align: center;
+}
+.Title {
+    text-align: left;
+    font-family: poppins;
+    color: #caced8;
+    font-size: clamp(.8rem, 2vw, 2rem);
+}
+.taskDescrip {
+    text-align: left;
+    font-family: poppins;
+    color: rgb(244, 244, 244);
+    word-break: break-all;
+}
+.code {
+    text-align: left;
+    font-family: poppins;
+    color: rgb(244, 244, 244);
+    word-break: break-all;
+    font-size: clamp(.4rem, 2vw, 1rem);
+}
+h4, h3 {
+    text-align: left;
+    font-family: poppins;
+    color: #caced8;
+    word-break: break-all;   
+    font-size: clamp(.4rem, 2vw, 1rem);
+}
+ul {
+    text-align: left;
+    font-family: poppins;
+    color: rgb(244, 244, 244);
+    word-break: break-all;
+}
+a {
+    font-family: poppins;
+    color: rgb(244, 244, 244);
+    text-decoration: none;
+    font-size: clamp(.4rem, 2vw, 1.4rem);
+    text-align: center;
+}
+.navOption {
+    display: flex;
+    padding: 20px;
+    padding-right: 60px;
+    justify-content: space-between;
+    gap: 30px;
+    position: fixed;
+    z-index: 1000;
+    width: 98%;
+    top: 0;
+    left: 0;
+    background-color: #0b1215;
+    font-family: poppins;
+}
+.navOption a {
+
+    word-break: break-all;
+    font-size: clamp(.4rem, 2vw, 2rem);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.githubRepo, .EDM {
+    color: rgb(244, 244, 244);
+    position: relative;
+    word-break: break-word;
+    max-width: max-content;
+}
+.githubRepo:hover, .EDM:hover {
+    color: #ffa600;
+    transition: .5s;
+}
+.githubRepo::before, .EDM::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-image: linear-gradient(to right, #ff8531, #ff8933, #ff8c35, #ff9037, #ff9339, #ff993d, #ff9f41, #ffa546, #ffae4e, #ffb757, #ffc061, #ffc86b);
+    transition: all .5s;
+}
+.githubRepo:hover::before, .EDM:hover::before{
+    width: 100%;
+    transition: all .5s;
+}
