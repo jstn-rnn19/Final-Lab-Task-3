@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Lab Task 3</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/ftask3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <nav class="navOption">
+            <a href="https://jstn-rnn19.github.io/EDM-Portfolio-Justine-Reinn-Sanidad/" target="_self" rel="noopener noreferrer" class="EDM">EDM Portfolio</a>
+            <a href="https://github.com/jstn-rnn19/EDM-Portfolio-Justine-Reinn-Sanidad" target="_self" rel="noopener noreferrer" class="githubRepo">Github Repo</a>
+        </nav>
+        <h1 class="lab3title">Final Lab Task 3</h1>
+        <p class="lab3descrip">Table Manipulation</p>
+        <p class="descrip">the following are the task that need to implemented using MySQL statement. Make Sure to complete them in the order specified:</p>
+        <section class="container">
+            <h1 class="Title">Step 1</h1>
+            <ul>
+                <li>Open XAMPP and start the Apatche and MySQL then open MySQL workbench</li>
+                <li>Add a new connection</li>
+                <li>Click the connection made</li>
+            </ul>
+        </section>
+        <section class="container">
+            <h1 class="Title">Step 2</h1>
+            <ul>
+                <li>Create a DATABASE BY using <code>CREATE DATABE database_name</code></li>
+                <li>Use the database that has created by using <code>USE database_name</code></li>
+            </ul>
+        </section>
+        <section class="container">
+            <h1 class="Title">Task 1</h1>
+            <p class="taskDescrip">Create a table named products with the following fields: <code>id</code>: Unique integer, auto-increment, primary key. <code>product_name</code>: String (VARCHAR) with a maximum length of 100, cannot be null. <code>price</code>: Decimal</p>
+            <h3>Code:</h3>
+            <p class="code"><code>CREATE TABLE products (id INT(3) UNIQUE AUTO_INCREMENT PRIMARY KEY, product_name VARCHAR(100) NOT NULL,  price FLOAT(7,4) NOT NULL);</code></p>
+            <h4>HERE IS THE QUERY STATEMENT AND TABLE STRUCTURE</h4>
+            <img src="image/Screenshot 2025-04-12 145310.webp" alt="">
+        </section>
+        <section class="container">
+            <h1 class="Title">Task 2</h1>
+            <p class="taskDescrip">Add a <code>CHECK</code> constraint to ensure that the <code>price</code> of the product must be greater than 0</p>
+            <h3>Code:</h3>
+            <p class="code"><code>ALTER TABLE products MODIFY COLUMN price FLOAT(7,2) CHECK (price > 0);</code></p>
+            <h4>HERE IS THE QUERY STATEMENT AND TABLE STRUCTURE</h4>
+            <img src="image/Screenshot 2025-04-12 145356.webp" alt="">
+        </section>
+        <section class="container">
+            <h1 class="Title">Step 3</h1>
+            <p class="taskDescrip">Insert the products that will not violate the check constraint into the products table:</p>
+            <ul>
+                <li>Product 1: "Laptop", 999.99</li>
+                <li>Product 2: "Headphones", -49.99</li>
+                <li>Product 3: "Smartphone", 599.99</li>
+                <li>Product 4: "Tablet", 299.99</li>
+                <li>Product 5: "Monitor", -149.99</li>
+                <li>Product 6: "Keyboard", 19.99</li>
+                <li>Product 7: "Mouse", 14.99</li>
+                <li>Product 8: "Desk Lamp", 24.99</li>
+                <li>Product 9: "External Hard Drive", -79.99</li>
+                <li>Product 10: "Speakers", 9.99</li>
+            </ul>
+            <h3>Code:</h3>
+            <p class="code">(I insert only the greater than 0 not with the negative value) <code>INSERT INTO products(id, product_name, price) VALUES (1, 'Laptop', 999.99), (3, 'Smartphone', 599.99), (4, 'Tablet', 299.99), (6, 'Keyboard', 19.99), (7, 'Mouse', 14.99), (8, 'Desk Lamp', 24.99),  (10, 'Speakers', 9.99);</code></p>
+            <h4>HERE IS THE QUERY STATEMENT AND TABLE STRUCTURE</h4>
+            <img src="image/Screenshot 2025-04-12 145502.webp" alt="">
+        </section>
+        <section class="container">
+            <h1 class="Title">Task 4</h1>
+            <p class="taskDescrip">Modify the <code>product_name</code> field to have a maximum length of 120 characters.</p>
+            <h3>Code:</h3>
+            <p class="code"><code> ALTER TABLE products MODIFY COLUMN product_name VARCHAR(120) NOT NULL;</code></p>
+            <h4>HERE IS THE QUERY STATEMENT AND TABLE STRUCTURE</h4>
+            <img src="image/Screenshot 2025-04-12 145530.webp" alt="">
+        </section>
+        <section class="container">
+            <h1 class="Title">Here is the ER Diagram</h1>
+            <img src="image/Screenshot 2025-04-12 151511.webp" alt="">
+        </section>
+        <section class="container">
+            <h1 class="Title">HERE IS THE MYSQL FILE</h1>
+            <a href="file/task_3_db_products.sql" target="_blank" rel="noopener noreferrer">Product Table</a>
+        </section>
+        <section class="container">
+            <h1 class="Title">Here is the github repo for this task</h1>
+            <a href="https://github.com/jstn-rnn19/EDM-Portfolio-Justine-Reinn-Sanidad/tree/main/Final%20Lab%20Task%203" target="_blank" rel="noopener noreferrer">Github Repo Task 3</a>
+        </section>
+    </main>
+</body>
+</html>
